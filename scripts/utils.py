@@ -140,3 +140,13 @@ class Utils:
         plt.xticks(fontsize=14)
         plt.yticks( fontsize=14)
         plt.show()
+    
+    def bernouli_generator(self,engagement: pd.Series, yes_count: pd.Series):
+        engagement_list = engagement.tolist()
+        yes_list = yes_count.tolist()
+        bernouli_series = []
+        for i in range(len(engagement_list)):
+            no_list = engagement_list[i] - yes_list[i]
+            bernouli_series += yes_list[i] * [1]
+            bernouli_series += no_list * [0]
+        return bernouli_series
