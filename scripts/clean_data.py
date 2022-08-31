@@ -177,3 +177,12 @@ class DataCleaner:
         
         return df
 
+    def drop_unresponsive(self, df: pd.DataFrame) -> pd.DataFrame:
+    
+        """
+        This drops rows where users didn't repond to the questioneer.
+        Meaning, rows where both yes and no columns have 0
+        """
+        df = df.query("yes!=no")
+
+        return df
