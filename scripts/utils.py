@@ -89,10 +89,11 @@ class Utils:
         
         return df[bytes_data]
 
-    def plot_hist(self,df:pd.DataFrame, column:str, color:str)->None:
+    def plot_hist(self,df:pd.DataFrame, column:str, color:str,rot:int=0)->None:
         plt.figure(figsize=(12, 7))
         # fig, ax = plt.subplots(1, figsize=(12, 7))
         sns.histplot(data=df, x=column, color=color, kde=True)
+        plt.xticks(rotation=rot)
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
         plt.show()
 
