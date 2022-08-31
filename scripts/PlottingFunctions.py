@@ -90,7 +90,7 @@ class PlottingFunctions:
         """
         self.plot_norm_dist(ax, mde, stderr, label="Alternative")
         
-    def show_area(ax, mde, stderr, sig_level, area_type=None):
+    def show_area(self,ax, mde, stderr, sig_level, area_type=None):
         """
         Fill between upper significance boundary and distribution for
         alternative hypothesis
@@ -105,7 +105,7 @@ class PlottingFunctions:
         # Fill between upper significance boundary and distribution for alternative
         # hypothesis
         if area_type == 'power':
-            ax.fill_between(x, 0, alternative.pdf(x), color='green', alpha='0.25',
+            ax.fill_between(x, 0, alternative.pdf(x), color='green', alpha=0.25,
                             where=(x > right))
             ax.text(-5 * stderr, null.pdf(0),
                     'power = {0:.3f}'.format(1 - alternative.cdf(right)),
