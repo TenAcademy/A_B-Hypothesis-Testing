@@ -17,10 +17,10 @@ HPP = HypothesisPlot()
 #hypo_plot
 
 class DistributionPlots:
-    def _init_(self):
-        """
-        Initializing DistributionPlots class
-        """
+    # def _init_(self):
+    #     """
+    #     Initializing DistributionPlots class
+    #     """
         
     def cont_distribution(self, C_aware, C_total, C_cr, E_cr) -> None:
         fig, ax = plt.subplots(figsize=(12,6))
