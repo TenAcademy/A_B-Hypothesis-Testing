@@ -186,3 +186,23 @@ class DataCleaner:
         df = df.query("yes!=no")
 
         return df
+    def count_responsive(self, df: pd.DataFrame) -> pd.DataFrame:
+
+        """
+        This function merges responisve online users based there tendency to memorize
+        Meaning, any rows from yes and no column with 1 is responsive 
+         and with 0 is not respnosive.
+        """
+        number=df.shape[0]
+        rvalue={}
+        for rows in range(number):
+            yes=df.get_vlaue(rows, 'yes', takeable=False)
+            no=df.get_vlaue(rows, 'no', takeable=False)
+            if(yes==1 or no==1):
+                rvalue.append(1)
+            else:
+                rvalue.append(0)
+        df['responsive']=rvalue
+
+        return df
+    
