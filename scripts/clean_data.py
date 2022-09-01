@@ -193,11 +193,16 @@ class DataCleaner:
         Meaning, any rows from yes and no column with 1 is responsive 
          and with 0 is not respnosive.
         """
-        df = df.query("yes!=no")
-        if(df==True):
-            df["responsive"]=0
-        else:
-            df["responsive"]=1
+        number=df.shape(:1)
+        rvalue={}
+        for rows in range(number):
+            yes=df.get_vlaue(rows, 'yes', takeable=False)
+            no=df.get_vlaue(rows, 'no', takeable=False)
+            if(yes==1 or no==1):
+                rvalue.append(1)
+            else:
+                rvalue.append(0)
+        df['responsive']=rvalue
 
         return df
     
