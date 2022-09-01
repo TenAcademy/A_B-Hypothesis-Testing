@@ -186,7 +186,7 @@ class DataCleaner:
         df = df.query("yes!=no")
 
         return df
-    def count_responsive(self, df: pd.DataFram) -> pd.DataFrame:
+    def count_responsive(self, df: pd.DataFrame) -> pd.DataFrame:
 
         """
         This function merges responisve online users based there tendency to memorize
