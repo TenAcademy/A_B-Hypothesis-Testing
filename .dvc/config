@@ -1,0 +1,4 @@
+[core]
+    remote = dvc-rm
+['remote "dvc-rm"']
+    url = /temp/dvc-storage
