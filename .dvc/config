@@ -1,4 +1,4 @@
 [core]
     remote = dvc-rm
 ['remote "dvc-rm"']
-    url = /temp/dvc-storage
+    url = https://github.com/TenAcademy/A_B-Hypothesis-Testing/.dvc/temp/dvc-storage
