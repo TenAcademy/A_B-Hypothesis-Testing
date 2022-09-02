@@ -1,4 +1,0 @@
-[core]
-    remote = dvc-rem
-['remote "dvc-rem"']
-    url = gdrive://1ELCACyDsbAnSW30anixmh3VF11D_sy84
