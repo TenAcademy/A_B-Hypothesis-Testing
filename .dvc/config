@@ -1,0 +1,4 @@
+[core]
+    remote = dvc-remote
+['remote "dvc-remote"']
+    url = https://github.com/TenAcademy/A_B-Hypothesis-Testing
