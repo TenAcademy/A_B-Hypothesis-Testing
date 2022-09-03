@@ -194,10 +194,10 @@ class DataCleaner:
          and with 0 is not respnosive.
         """
         number=df.shape[0]
-        rvalue={}
+        rvalue=[]
         for rows in range(number):
-            yes=df.get_vlaue(rows, 'yes', takeable=False)
-            no=df.get_vlaue(rows, 'no', takeable=False)
+            yes=df.at[rows, 'yes']
+            no=df.at[rows, 'no']
             if(yes==1 or no==1):
                 rvalue.append(1)
             else:
