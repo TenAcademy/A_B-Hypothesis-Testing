@@ -50,7 +50,7 @@ class DistributionPlots:
         HPP.hypo_plot(C_total, E_total, bcr, mde, show_power=True, show_beta=True, show_alpha=True, show_p_value=True)
     
     def cont_distribution_resp(self, C_aware, C_total, C_cr, E_cr) -> None:
-        fig, ax = plt.subplots(figsize=(12,6))
+        fig, ax = plt.subplots(figsize=(14,7))
         x = np.linspace(C_aware-59, C_aware+60, 120)
         y = scs.binom(C_total, C_cr).pmf(x)
         ax.bar(x, y, alpha=0.5)
@@ -58,9 +58,9 @@ class DistributionPlots:
         plt.xlabel('Responsive')
         plt.ylabel('probability')
         plt.show()
-        
+
     def cont_exp_distribution_resp(self, C_aware, E_aware, C_total, E_total, C_cr, E_cr) -> None:
-        fig, ax = plt.subplots(figsize=(12,6))
+        fig, ax = plt.subplots(figsize=(14,7))
         xC = np.linspace(C_aware-59, C_aware+60, 120)
         yC = scs.binom(C_total, C_cr).pmf(xC)
         ax.bar(xC, yC, alpha=0.5)
