@@ -41,7 +41,7 @@ if __name__ == "__main__":
     # Importing the collected Data
     path = 'data/dset.csv'
     path2 = 'data/ABtwoCampaignEngView.csv'
-    repo = 'https://github.com/Abel-Blue/smartAd-abTest'
+    repo = None
     tags = ['browser-v1', 'platform-v1']
 
     df_dict = {}
